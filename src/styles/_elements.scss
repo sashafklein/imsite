@@ -1,0 +1,13 @@
+.btn {
+  border-radius: 100px;
+  width: 130px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--off-white {
+    background: $color-off-white;
+    color: $color-royal-blue;
+  }
+}

@@ -1,8 +1,10 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Immunity Score`,
+    description: `A safe and secure way to demonstrate immunity.`,
+    author: `@imsafepass`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +27,42 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: ["components", "pages", "styles", "images"].reduce(
+          (obj, el) => ({
+            ...obj,
+            [`@${el}`]: path.resolve(__dirname, `src/${el}`),
+          }),
+          {}
+        ),
+        extensions: ["ts", "scss"],
+      },
+    },
+    `gatsby-plugin-typescript`,
+    {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        layout: require.resolve(`./src/components/layout/index.tsx`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Heebo:wght@400;700`, `Roboto`],
+        display: "swap",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/,
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
