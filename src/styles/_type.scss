@@ -24,8 +24,19 @@ h6 {
 
 p,
 li,
-button {
+button,
+label,
+input {
   @include p;
+}
+
+input,
+textarea {
+  padding: 5px;
+}
+
+label {
+  font-weight: bold;
 }
 
 a {
