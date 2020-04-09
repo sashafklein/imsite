@@ -21,6 +21,10 @@ main.page > div {
   transition: opacity 0.3s ease;
   background-color: $color-royal-blue;
 
+  // &.delayed {
+  //   transition-delay: 3s;
+  // }
+
   h2 {
     opacity: 0;
     transition: opacity 0.3s ease;

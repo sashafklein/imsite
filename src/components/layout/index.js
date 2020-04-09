@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
       </div>
-      <div className="nav">
+      <div className={`nav ${menuOpen ? "delayed" : ""}`}>
         <div className="container--large">
           {menuItems.map((item, ind) => (
             <h2 className="color--white mt30" key={ind}>

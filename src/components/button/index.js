@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 
 import "./button.scss"
 
@@ -11,18 +11,6 @@ const Button = ({
   onClick,
   style = {},
 }) => {
-  const { site, allFile } = useStaticQuery(graphql`
-    query ButtonQuery {
-      allFile(filter: { relativeDirectory: { eq: "icons" } }) {
-        nodes {
-          publicURL
-          relativeDirectory
-          name
-        }
-      }
-    }
-  `)
-
   const types = type.split(",")
 
   const typeClasses = types.map(type => `btn--${type}`).join(" ")

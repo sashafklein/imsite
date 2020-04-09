@@ -38,11 +38,11 @@ const IndexPage = () => {
     <div className="home page">
       <SEO title="Home" />
       <div className="bg--royal-blue">
-        <div className="container--small">
+        <div className="container--small mt80--neg--resp">
           <div className="row">
             <div className="col-4">
               <img
-                alt="Doctor with logo"
+                alt="Illustration of doctor with clipboard"
                 src={assets.heroIll}
                 width={320}
                 className="mt20 ml40--resp"
@@ -62,6 +62,7 @@ const IndexPage = () => {
 
       <img
         src={assets.heroWave}
+        alt=""
         className="bg--transparent full-width pt40--resp"
         style={{ marginTop: "-15vw" }}
       />
@@ -89,6 +90,7 @@ const IndexPage = () => {
           <div className="row">
             <div className="col-6 relative mb40--resp">
               <img
+                alt="Illustration of logo with ruler"
                 src={assets.metricIll}
                 className="ml10 ml0--resp w365 w250--resp"
                 style={{ zIndex: 1 }}
@@ -140,6 +142,7 @@ const IndexPage = () => {
 
             <div className="col-6 flex flex-col relative pl80 pl0--resp mb40--resp">
               <img
+                alt="Illustration of friends hanging out"
                 src={assets.newNormalIll}
                 className="w450 w300--resp"
                 style={{ zIndex: 1 }}
@@ -151,6 +154,7 @@ const IndexPage = () => {
           <div className="row mt100 pb100">
             <div className="col-6 relative mb40--resp">
               <img
+                alt="Illustration of man looking at blank canvas"
                 src={assets.institutionsIll}
                 className="ml10 ml0--resp w365 w250--resp"
                 style={{ zIndex: 1 }}
@@ -182,6 +186,7 @@ const IndexPage = () => {
       </div>
 
       <img
+        alt=""
         src={assets.applicationsWave}
         className="bg--transparent full-width"
         style={{ marginBottom: "-5px" }}
@@ -195,7 +200,11 @@ const IndexPage = () => {
           <Carousel>
             <div className="flex flex-col">
               <div className="h400 flex flex-col flex-jc--c">
-                <img style={{ width: 300 }} src={assets.catchRideIll} />
+                <img
+                  style={{ width: 300 }}
+                  src={assets.catchRideIll}
+                  alt="Illustration of car riding service"
+                />
               </div>
               <div className="flex flex-col h250 flex-ai--fs left">
                 <h4 className="color--dark-purple">Catching a ride</h4>
@@ -211,7 +220,11 @@ const IndexPage = () => {
             </div>
             <div className="flex flex-col">
               <div className="h400 flex flex-col flex-jc--fs">
-                <img style={{ width: 450 }} src={assets.healthcareWorkersIll} />
+                <img
+                  style={{ width: 450 }}
+                  alt="Illustration of doctor and patient"
+                  src={assets.healthcareWorkersIll}
+                />
               </div>
               <div className="flex flex-col h250 flex-ai--fs left">
                 <h4 className="color--dark-purple">
@@ -229,7 +242,11 @@ const IndexPage = () => {
             </div>
             <div className="flex flex-col">
               <div className="h400 flex flex-col flex-jc--fs">
-                <img style={{ width: 300 }} src={assets.diningOutIll} />
+                <img
+                  style={{ width: 300 }}
+                  src={assets.diningOutIll}
+                  alt="Illustration of two people eating"
+                />
               </div>
               <div className="flex flex-col h250 flex-ai--fs left">
                 <h4 className="color--dark-purple">Dining Out</h4>
@@ -247,7 +264,11 @@ const IndexPage = () => {
 
         <div className="container--large pb150">
           <h4 className="left color--dark-purple">How it Works</h4>
-          <img src={assets.diagram} width="100%" />
+          <img
+            src={assets.diagram}
+            width="100%"
+            alt="Diagram: Variety of data inputs (labs, wearables, etc) and variety of outputs (nursing homes, employers, etc)."
+          />
         </div>
       </div>
       <LinkFooter to="/solution" text="Our solution" />
