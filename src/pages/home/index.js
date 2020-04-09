@@ -79,6 +79,7 @@ const IndexPage = () => {
         siteMetadata {
           description
           title
+          heroDescription
         }
       }
       allFile(filter: { relativeDirectory: { eq: "home" } }) {
@@ -97,17 +98,14 @@ const IndexPage = () => {
   ] = useState(0)
   const assets = getAssets(allFile)
 
-  const { title, description } = site.siteMetadata
+  const { title, description, heroDescription } = site.siteMetadata
   const slides = carouselChildren({ title, assets })
   const slideSize = 500
   const horizontalScrollLength = slideSize * slides.length
 
-  const heroText =
-    "We're building a solution to help us all get back to normal in the wake of Covid-19 that serves public health and respects personal privacy."
-
   return (
     <div className="home page">
-      <SEO title={`${title} - Home - ${description}`} description={heroText} />
+      <SEO title="Home" />
       <div className="bg--royal-blue">
         <div className="container--small mt80--neg--resp">
           <div className="row">
@@ -121,7 +119,7 @@ const IndexPage = () => {
             </div>
             <div className="flex-col col-8 color--white center-text--resp row">
               <h1>{description}</h1>
-              <h5>{heroText}</h5>
+              <h5>{heroDescription}</h5>
             </div>
           </div>
         </div>
