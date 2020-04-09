@@ -1,13 +1,13 @@
 import React from "react"
 
-const Solution = () => (
-  <div className="page solution">
+const ContactUs = () => (
+  <div className="page contact-us">
     <div className="container">
       <div className="row">
-        <h1>Solution</h1>
+        <h1>Contact Us</h1>
       </div>
     </div>
   </div>
 )
 
-export default Solution
+export default ContactUs
