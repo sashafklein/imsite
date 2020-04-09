@@ -12,7 +12,9 @@ const Footer = ({ siteTitle, author }) => (
       style={{ height: 40 }}
     >
       <p className="color--white" style={{ margin: 0 }}>
-        &copy; {new Date().getFullYear()} {siteTitle}
+        <strong>
+          &copy; {new Date().getFullYear()} {siteTitle}
+        </strong>
       </p>
       <a href={`https://twitter.com/${author.replace("@", "")}`}>
         <TwitterIcon width={20} />
