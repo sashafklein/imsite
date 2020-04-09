@@ -5,7 +5,7 @@ import Logo from "@images/logo-white.svg"
 import Hamburger from "@images/icons/hamburger.svg"
 import Button from "./button"
 
-const Header = ({ siteTitle, menuItems, menuOpen, setMenuOpen }) => (
+const Header = ({ siteTitle, menuItems, menuState, setMenuState }) => (
   <header className="site-header bg--royal-blue h100 flex flex-al--c">
     <div className="container--large flex flex-ai--c flex-jc--sb color--off-white">
       <div className="site-header__left flex flex-jc--fs flex-ai--c">
@@ -32,7 +32,7 @@ const Header = ({ siteTitle, menuItems, menuOpen, setMenuOpen }) => (
           height={36}
           className="cursor-pointer"
           onClick={() => {
-            setMenuOpen(!menuOpen)
+            setMenuState(menuState.includes("open") ? "closing" : "opening")
           }}
         />
       </div>

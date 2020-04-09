@@ -21,18 +21,22 @@ main.page > div {
   transition: opacity 0.3s ease;
   background-color: $color-royal-blue;
 
-  // &.delayed {
-  //   transition-delay: 3s;
-  // }
-
   h2 {
     opacity: 0;
     transition: opacity 0.3s ease;
   }
 
-  &--open {
+  &--opening,
+  &--open,
+  &--closing {
     .nav {
       z-index: 2;
+      opacity: 1;
+    }
+  }
+
+  &--open {
+    h2 {
       opacity: 1;
     }
 
@@ -40,10 +44,6 @@ main.page > div {
       h2:nth-child(#{$i}) {
         transition-delay: #{0.12 + $i * 0.06}s;
       }
-    }
-
-    h2 {
-      opacity: 1;
     }
   }
 }
