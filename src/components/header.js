@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import Link from "gatsby-plugin-transition-link/AniLink"
 import React from "react"
 
 import Logo from "@images/logo-white.svg"
@@ -10,21 +10,31 @@ const Header = ({ siteTitle }) => (
       <div className="flex flex-jc--fs flex-ai--c">
         <Logo />
         <h4 className="ml15">
-          <Link to="/">{siteTitle}</Link>
+          <Link fade duration={0.3} to="/">
+            {siteTitle}
+          </Link>
         </h4>
       </div>
       <div className="flex flex-jc--fe flex-ai--c">
         <h6>
-          <Link to="/">Home</Link>
+          <Link fade duration={0.3} to="/">
+            Home
+          </Link>
         </h6>
         <h6 className="ml40">
-          <Link to="/solution">Our Solution</Link>
+          <Link fade duration={0.3} to="/solution">
+            Our Solution
+          </Link>
         </h6>
         <h6 className="ml40">
-          <Link to="/mission">Our Mission</Link>
+          <Link fade duration={0.3} to="/mission">
+            Our Mission
+          </Link>
         </h6>
         <h6 className="ml40">
-          <Link to="/about-us">About Us</Link>
+          <Link fade duration={0.3} to="/about-us">
+            About Us
+          </Link>
         </h6>
         <h6 className="ml40">
           <Button type="off-white" to="/contact-us">

@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import "./button.scss"
 
@@ -30,9 +31,9 @@ const Button = ({
 
   if (to) {
     return (
-      <Link to={to} className={classes} style={style}>
+      <AniLink to={to} duration={0.3} fade className={classes} style={style}>
         {children}
-      </Link>
+      </AniLink>
     )
   } else {
     return (
