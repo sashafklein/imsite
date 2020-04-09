@@ -102,9 +102,12 @@ const IndexPage = () => {
   const slideSize = 500
   const horizontalScrollLength = slideSize * slides.length
 
+  const heroText =
+    "We're building a solution to help us all get back to normal in the wake of Covid-19 that serves public health and respects personal privacy."
+
   return (
     <div className="home page">
-      <SEO title="Home" />
+      <SEO title={`${title} - Home - ${description}`} description={heroText} />
       <div className="bg--royal-blue">
         <div className="container--small mt80--neg--resp">
           <div className="row">
@@ -118,11 +121,7 @@ const IndexPage = () => {
             </div>
             <div className="flex-col col-8 color--white center-text--resp row">
               <h1>{description}</h1>
-              <h5>
-                We're building a solution to help us all get back to normal in
-                the wake of Covid-19 that serves public health and respects
-                personal privacy.
-              </h5>
+              <h5>{heroText}</h5>
             </div>
           </div>
         </div>
