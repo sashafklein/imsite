@@ -282,7 +282,7 @@ const IndexPage = () => {
             </div>
             {horizontalScrollTransformPerc ? (
               <Button
-                className="absolute hidden-sm"
+                className="absolute hidden-sm carousel-nav"
                 style={{ bottom: 50, left: 50 }}
                 type="left-icon,royal-blue"
                 onClick={() =>
@@ -299,7 +299,7 @@ const IndexPage = () => {
             {horizontalScrollTransformPerc >=
             (100 / slides.length) * (slides.length - 2) ? null : (
               <Button
-                className="absolute hidden-sm"
+                className="absolute hidden-sm carousel-nav"
                 style={{ bottom: 50, right: 50 }}
                 type="icon,royal-blue"
                 onClick={() =>

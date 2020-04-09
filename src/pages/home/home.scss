@@ -10,4 +10,19 @@
       }
     }
   }
+  @media only screen and (min-width: $breakpoint-large) {
+    &__horizontal-scroll {
+      justify-content: space-between;
+      min-width: none;
+      padding-top: 80px;
+    }
+
+    .btn.carousel-nav {
+      display: none;
+    }
+
+    > div {
+      padding-left: 0;
+    }
+  }
 }
