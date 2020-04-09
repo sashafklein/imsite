@@ -5,6 +5,10 @@
     flex-direction: column;
   }
 
+  &-row {
+    flex-direction: row;
+  }
+
   &-row-r {
     flex-direction: row-reverse;
 
@@ -88,17 +92,5 @@
     &--fs {
       align-self: flex-start;
     }
-  }
-}
-
-.hidden-sm {
-  @media only screen and (max-width: $breakpoint-desk) {
-    display: none;
-  }
-}
-
-.hidden-lg {
-  @media only screen and (min-width: $breakpoint-desk) {
-    display: none;
   }
 }

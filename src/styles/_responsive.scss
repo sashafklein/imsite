@@ -1,0 +1,11 @@
+.hidden-sm {
+  @media only screen and (max-width: $breakpoint-desk) {
+    display: none;
+  }
+}
+
+.hidden-lg {
+  @media only screen and (min-width: $breakpoint-desk) {
+    display: none;
+  }
+}

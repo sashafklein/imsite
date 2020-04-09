@@ -1,6 +1,24 @@
+@import "@styles/variables";
+
 .carousel-root {
   li.slide {
     background-color: transparent;
-    padding-right: 80px;
+
+    > div > div {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .control-dots {
+    padding-left: 0;
+    .dot {
+      box-shadow: none;
+      background-color: $color-royal-blue;
+
+      &.selected {
+        background-color: $color-dark-purple;
+      }
+    }
   }
 }

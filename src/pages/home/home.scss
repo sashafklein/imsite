@@ -1,4 +1,13 @@
 @import "@styles/variables";
 
 .home {
+  &__horizontal-scroll {
+    transition: transform 0.3s ease;
+
+    > div {
+      &:not(:first-child) {
+        padding-left: 120px;
+      }
+    }
+  }
 }

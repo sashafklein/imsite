@@ -9,6 +9,7 @@
   align-items: center;
   transition: background-color 0.3s ease;
   border-width: 0;
+  cursor: pointer;
 
   &--off-white {
     background: $color-off-white;
@@ -43,18 +44,33 @@
     padding-left: 0;
   }
 
-  &--icon {
+  &--icon,
+  &--left-icon {
     justify-content: flex-start;
   }
 
-  svg {
-    margin-left: 20px;
-    transition: margin-left 0.3s ease;
+  &--left-icon {
+    &:hover {
+      svg {
+        margin-right: 25px;
+      }
+    }
+    svg {
+      margin-right: 20px;
+      transition: margin-right 0.3s ease;
+    }
   }
 
-  &:hover {
+  &--icon {
     svg {
-      margin-left: 25px;
+      margin-left: 20px;
+      transition: margin-left 0.3s ease;
+    }
+
+    &:hover {
+      svg {
+        margin-left: 25px;
+      }
     }
   }
 

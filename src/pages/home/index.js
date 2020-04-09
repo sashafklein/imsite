@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import RightArrow from "@images/icons/right-arrow.svg"
+import ShortArrowRight from "@images/icons/short-right-arrow.svg"
+import ShortArrowLeft from "@images/icons/short-arrow-left.svg"
 
 import Carousel from "@components/carousel"
 import { getAssets } from "@utils/getAssets"
@@ -10,6 +12,65 @@ import Button from "@components/button"
 import LinkFooter from "@components/link-footer"
 
 import "./home.scss"
+
+const carouselChildren = ({ title, assets }) => [
+  <div className="flex flex-col">
+    <div className="h400 flex flex-col flex-jc--c">
+      <img
+        style={{ width: 300 }}
+        src={assets.catchRideIll}
+        alt="Illustration of car riding service"
+      />
+    </div>
+    <div className="flex flex-col h250 flex-ai--fs left">
+      <h4 className="color--dark-purple">Catching a ride</h4>
+      <p>
+        {title} will allow drivers and riders assess their individual risk when
+        accepting a ride share arrangement. Rideshare partners will integrate
+        Verified Immunity Scores into profiles, so that for example, an
+        immunosuppressed customer could be paired with a high-scoring driver or
+        only accept ride with a specialized disinfection protocol.
+      </p>
+    </div>
+  </div>,
+  <div className="flex flex-col">
+    <div className="h400 flex flex-col flex-jc--fs">
+      <img
+        style={{ width: 450 }}
+        alt="Illustration of doctor and patient"
+        src={assets.healthcareWorkersIll}
+      />
+    </div>
+    <div className="flex flex-col h250 flex-ai--fs left">
+      <h4 className="color--dark-purple">Clearing Healthcare Workers</h4>
+      <p>
+        Healthcare works are at the highest risk for contracting Covid-19, but
+        essential on-going care, such as eldercare, non-Covid outpatient and
+        inpatient care, or dialysis, cannot be neglected long-term. With {title}
+        , healthcare workers who have recovered from Covid-19 could safely
+        return to the frontlines where they’re needed most.
+      </p>
+    </div>
+  </div>,
+  <div className="flex flex-col">
+    <div className="h400 flex flex-col flex-jc--fs">
+      <img
+        style={{ width: 300 }}
+        src={assets.diningOutIll}
+        alt="Illustration of two people eating"
+      />
+    </div>
+    <div className="flex flex-col h250 flex-ai--fs left">
+      <h4 className="color--dark-purple">Dining Out</h4>
+      <p>
+        Local restaurants have been some of the hardest hit by shelter-in-place
+        orders, with many forced to shutter and layoff staff. A Verified
+        Immunity Score will give restaurants the confidence to schedule
+        non-contagious employees and welcome non-contagious guests to dine-in.
+      </p>
+    </div>
+  </div>,
+]
 
 const IndexPage = () => {
   const { site, allFile } = useStaticQuery(graphql`
@@ -30,9 +91,16 @@ const IndexPage = () => {
     }
   `)
 
+  const [
+    horizontalScrollTransformPerc,
+    setHorizontalScrollTransformPerc,
+  ] = useState(0)
   const assets = getAssets(allFile)
 
   const { title, description } = site.siteMetadata
+  const slides = carouselChildren({ title, assets })
+  const slideSize = 500
+  const horizontalScrollLength = slideSize * slides.length
 
   return (
     <div className="home page">
@@ -193,73 +261,57 @@ const IndexPage = () => {
       />
 
       <div className="row bg--off-white flex-col">
-        <div className="relative container--large">
-          <h4 className="color--dark-purple left mt20 flex-as--fs">
-            Potential applications
-          </h4>
-          <Carousel>
-            <div className="flex flex-col">
-              <div className="h400 flex flex-col flex-jc--c">
-                <img
-                  style={{ width: 300 }}
-                  src={assets.catchRideIll}
-                  alt="Illustration of car riding service"
-                />
-              </div>
-              <div className="flex flex-col h250 flex-ai--fs left">
-                <h4 className="color--dark-purple">Catching a ride</h4>
-                <p>
-                  {title} will allow drivers and riders assess their individual
-                  risk when accepting a ride share arrangement. Rideshare
-                  partners will integrate Verified Immunity Scores into
-                  profiles, so that for example, an immunosuppressed customer
-                  could be paired with a high-scoring driver or only accept ride
-                  with a specialized disinfection protocol.
-                </p>
-              </div>
+        <div className="container--large pb100--resp">
+          <div className="relative">
+            <h4 className="color--dark-purple left mt20 flex-as--fs">
+              Potential applications
+            </h4>
+            <Carousel className="hidden-lg">{slides}</Carousel>
+            <div
+              className="home__horizontal-scroll flex flex-row flex-jc--fs mb100 hidden-sm"
+              style={{
+                minWidth: horizontalScrollLength,
+                transform: `translateX(-${horizontalScrollTransformPerc}%)`,
+              }}
+            >
+              {slides.map(child =>
+                React.cloneElement(child, {
+                  className: `w${slideSize}`,
+                })
+              )}
             </div>
-            <div className="flex flex-col">
-              <div className="h400 flex flex-col flex-jc--fs">
-                <img
-                  style={{ width: 450 }}
-                  alt="Illustration of doctor and patient"
-                  src={assets.healthcareWorkersIll}
-                />
-              </div>
-              <div className="flex flex-col h250 flex-ai--fs left">
-                <h4 className="color--dark-purple">
-                  Clearing Healthcare Workers
-                </h4>
-                <p>
-                  Healthcare works are at the highest risk for contracting
-                  Covid-19, but essential on-going care, such as eldercare,
-                  non-Covid outpatient and inpatient care, or dialysis, cannot
-                  be neglected long-term. With {title}, healthcare workers who
-                  have recovered from Covid-19 could safely return to the
-                  frontlines where they’re needed most.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <div className="h400 flex flex-col flex-jc--fs">
-                <img
-                  style={{ width: 300 }}
-                  src={assets.diningOutIll}
-                  alt="Illustration of two people eating"
-                />
-              </div>
-              <div className="flex flex-col h250 flex-ai--fs left">
-                <h4 className="color--dark-purple">Dining Out</h4>
-                <p>
-                  Local restaurants have been some of the hardest hit by
-                  shelter-in-place orders, with many forced to shutter and
-                  layoff staff. A Verified Immunity Score will give restaurants
-                  the confidence to schedule non-contagious employees and
-                  welcome non-contagious guests to dine-in.
-                </p>
-              </div>
-            </div>
-          </Carousel>
+            {horizontalScrollTransformPerc ? (
+              <Button
+                className="absolute hidden-sm"
+                style={{ bottom: 50, left: 50 }}
+                type="left-icon,royal-blue"
+                onClick={() =>
+                  setHorizontalScrollTransformPerc(
+                    horizontalScrollTransformPerc - 100.0 / slides.length
+                  )
+                }
+              >
+                <ShortArrowLeft /> Less
+              </Button>
+            ) : null}
+
+            {/* Only show the button if we have more than two items left */}
+            {horizontalScrollTransformPerc >=
+            (100 / slides.length) * (slides.length - 2) ? null : (
+              <Button
+                className="absolute hidden-sm"
+                style={{ bottom: 50, right: 50 }}
+                type="icon,royal-blue"
+                onClick={() =>
+                  setHorizontalScrollTransformPerc(
+                    horizontalScrollTransformPerc + 100.0 / slides.length
+                  )
+                }
+              >
+                More <ShortArrowRight />
+              </Button>
+            )}
+          </div>
         </div>
 
         <div className="container--large pb150">
