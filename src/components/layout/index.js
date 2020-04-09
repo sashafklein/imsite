@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "../header"
+import Footer from "../footer"
 import "./layout.scss"
 
 const menuItems = [
@@ -30,15 +31,22 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
   `)
 
+  const {
+    site: {
+      siteMetadata: { title, author },
+    },
+  } = data
+
   return (
     <div className={`nav--${menuState}`}>
       <Header
-        siteTitle={data.site.siteMetadata.title}
+        siteTitle={title}
         menuState={menuState}
         setMenuState={setMenuState}
         menuItems={menuItems}
@@ -57,6 +65,7 @@ const Layout = ({ children }) => {
           ))}
         </div>
       </div>
+      <Footer siteTitle={title} author={author} />
     </div>
   )
 }
