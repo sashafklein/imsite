@@ -1,0 +1,174 @@
+// SIMPLE GRID - SASS/SCSS
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left {
+  text-align: left;
+}
+
+[class^="container"] {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.container--med {
+  @media only screen and (min-width: $breakpoint-med) {
+    width: 80%;
+  }
+
+  @media only screen and (min-width: $breakpoint-desk) {
+    width: 75%;
+  }
+}
+
+.container--small {
+  @media only screen and (min-width: $breakpoint-med) {
+    width: 80%;
+  }
+
+  @media only screen and (min-width: $breakpoint-desk) {
+    width: 75%;
+  }
+
+  @media only screen and (min-width: $breakpoint-large) {
+    width: 60%;
+  }
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (min-width: $breakpoint-desk) {
+    flex-direction: row;
+  }
+}
+
+.row [class^="col"] {
+  min-height: 0.125rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  display: flex;
+  flex-basis: $width;
+}
+
+.col-1-sm {
+  flex-basis: ($width / 12) - ($gutter * 11 / 12);
+}
+.col-2-sm {
+  flex-basis: ($width / 6) - ($gutter * 10 / 12);
+}
+.col-3-sm {
+  flex-basis: ($width / 4) - ($gutter * 9 / 12);
+}
+.col-4-sm {
+  flex-basis: ($width / 3) - ($gutter * 8 / 12);
+}
+.col-5-sm {
+  flex-basis: ($width / (12 / 5)) - ($gutter * 7 / 12);
+}
+.col-6-sm {
+  flex-basis: ($width / 2) - ($gutter * 6 / 12);
+}
+.col-7-sm {
+  flex-basis: ($width / (12 / 7)) - ($gutter * 5 / 12);
+}
+.col-8-sm {
+  flex-basis: ($width / (12 / 8)) - ($gutter * 4 / 12);
+}
+.col-9-sm {
+  flex-basis: ($width / (12 / 9)) - ($gutter * 3 / 12);
+}
+.col-10-sm {
+  flex-basis: ($width / (12 / 10)) - ($gutter * 2 / 12);
+}
+.col-11-sm {
+  flex-basis: ($width / (12 / 11)) - ($gutter * 1 / 12);
+}
+.col-12-sm {
+  flex-basis: $width;
+}
+
+@media only screen and (min-width: $breakpoint-desk) {
+  .col-1 {
+    flex-basis: ($width / 12) - ($gutter * 11 / 12);
+  }
+  .col-2 {
+    flex-basis: ($width / 6) - ($gutter * 10 / 12);
+  }
+  .col-3 {
+    flex-basis: ($width / 4) - ($gutter * 9 / 12);
+  }
+  .col-4 {
+    flex-basis: ($width / 3) - ($gutter * 8 / 12);
+  }
+  .col-5 {
+    flex-basis: ($width / (12 / 5)) - ($gutter * 7 / 12);
+  }
+  .col-6 {
+    flex-basis: ($width / 2) - ($gutter * 6 / 12);
+  }
+  .col-7 {
+    flex-basis: ($width / (12 / 7)) - ($gutter * 5 / 12);
+  }
+  .col-8 {
+    flex-basis: ($width / (12 / 8)) - ($gutter * 4 / 12);
+  }
+  .col-9 {
+    flex-basis: ($width / (12 / 9)) - ($gutter * 3 / 12);
+  }
+  .col-10 {
+    flex-basis: ($width / (12 / 10)) - ($gutter * 2 / 12);
+  }
+  .col-11 {
+    flex-basis: ($width / (12 / 11)) - ($gutter * 1 / 12);
+  }
+  .col-12 {
+    flex-basis: $width;
+  }
+
+  .hidden-sm {
+    display: block;
+  }
+}

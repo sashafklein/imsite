@@ -1,0 +1,142 @@
+@for $i from 0 through 40 {
+  $spacerVal: $i * 5;
+  $heightVal: $i * 25;
+
+  .m#{$spacerVal} {
+    margin: #{$spacerVal}px;
+  }
+  .mt#{$spacerVal} {
+    margin-top: #{$spacerVal}px;
+  }
+  .mb#{$spacerVal} {
+    margin-bottom: #{$spacerVal}px;
+  }
+  .ml#{$spacerVal} {
+    margin-left: #{$spacerVal}px;
+  }
+  .mr#{$spacerVal} {
+    margin-right: #{$spacerVal}px;
+  }
+  .mv#{$spacerVal} {
+    margin-top: #{$spacerVal}px;
+    margin-bottom: #{$spacerVal}px;
+  }
+  .mh#{$spacerVal} {
+    margin-left: #{$spacerVal}px;
+    margin-right: #{$spacerVal}px;
+  }
+
+  .p#{$spacerVal} {
+    padding: #{$spacerVal}px;
+  }
+  .pt#{$spacerVal} {
+    padding-top: #{$spacerVal}px;
+  }
+  .pb#{$spacerVal} {
+    padding-bottom: #{$spacerVal}px;
+  }
+  .pl#{$spacerVal} {
+    padding-left: #{$spacerVal}px;
+  }
+  .pr#{$spacerVal} {
+    padding-right: #{$spacerVal}px;
+  }
+  .pv#{$spacerVal} {
+    padding-top: #{$spacerVal}px;
+    padding-bottom: #{$spacerVal}px;
+  }
+  .ph#{$spacerVal} {
+    padding-left: #{$spacerVal}px;
+    padding-right: #{$spacerVal}px;
+  }
+
+  .mt#{$spacerVal}--neg {
+    margin-top: -#{$spacerVal}px;
+  }
+  .mb#{$spacerVal}--neg {
+    margin-bottom: -#{$spacerVal}px;
+  }
+  .ml#{$spacerVal}--neg {
+    margin-left: -#{$spacerVal}px;
+  }
+  .mr#{$spacerVal}--neg {
+    margin-right: -#{$spacerVal}px;
+  }
+
+  .h#{$heightVal} {
+    height: #{$heightVal}px;
+  }
+}
+
+// To override, *all* resp classes need to follow in CSS
+@for $i from 0 through 40 {
+  $spacerVal: $i * 5;
+  $heightVal: $i * 25;
+
+  @media only screen and (max-width: $breakpoint-desk) {
+    .m#{$spacerVal}--resp {
+      margin: #{$spacerVal}px;
+    }
+    .mt#{$spacerVal}--resp {
+      margin-top: #{$spacerVal}px;
+    }
+    .mb#{$spacerVal}--resp {
+      margin-bottom: #{$spacerVal}px;
+    }
+    .ml#{$spacerVal}--resp {
+      margin-left: #{$spacerVal}px;
+    }
+    .mr#{$spacerVal}--resp {
+      margin-right: #{$spacerVal}px;
+    }
+    .mv#{$spacerVal}--resp {
+      margin-top: #{$spacerVal}px;
+      margin-bottom: #{$spacerVal}px;
+    }
+    .mh#{$spacerVal}--resp {
+      margin-left: #{$spacerVal}px;
+      margin-right: #{$spacerVal}px;
+    }
+
+    .p#{$spacerVal}--resp {
+      padding: #{$spacerVal}px;
+    }
+    .pt#{$spacerVal}--resp {
+      padding-top: #{$spacerVal}px;
+    }
+    .pb#{$spacerVal}--resp {
+      padding-bottom: #{$spacerVal}px;
+    }
+    .pl#{$spacerVal}--resp {
+      padding-left: #{$spacerVal}px;
+    }
+    .pr#{$spacerVal}--resp {
+      padding-right: #{$spacerVal}px;
+    }
+    .pv#{$spacerVal}--resp {
+      padding-top: #{$spacerVal}px;
+      padding-bottom: #{$spacerVal}px;
+    }
+    .ph#{$spacerVal}--resp {
+      padding-left: #{$spacerVal}px;
+      padding-right: #{$spacerVal}px;
+    }
+
+    .mt#{$spacerVal}--neg--resp {
+      margin-top: -#{$spacerVal}px;
+    }
+    .mb#{$spacerVal}--neg--resp {
+      margin-bottom: -#{$spacerVal}px;
+    }
+    .ml#{$spacerVal}--neg--resp {
+      margin-left: -#{$spacerVal}px;
+    }
+    .mr#{$spacerVal}--neg--resp {
+      margin-right: -#{$spacerVal}px;
+    }
+
+    .h#{$heightVal}--resp {
+      height: #{$heightVal}px;
+    }
+  }
+}

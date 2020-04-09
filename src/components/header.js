@@ -2,35 +2,34 @@ import { Link } from "gatsby"
 import React from "react"
 
 import Logo from "@images/logo-white.svg"
-
-import "./header.scss"
+import Button from "./button"
 
 const Header = ({ siteTitle }) => (
-  <header className="site-header">
-    <div className="row row--wide">
-      <div className="site-header__left">
+  <header className="site-header bg--royal-blue h100 flex flex-al--c">
+    <div className="container--large flex flex-ai--c flex-jc--sb color--off-white">
+      <div className="flex flex-jc--fs flex-ai--c">
         <Logo />
-        <h4>
+        <h4 className="ml15">
           <Link to="/">{siteTitle}</Link>
         </h4>
       </div>
-      <div className="site-header__right">
+      <div className="flex flex-jc--fe flex-ai--c">
         <h6>
           <Link to="/">Home</Link>
         </h6>
-        <h6>
+        <h6 className="ml40">
           <Link to="/solution">Our Solution</Link>
         </h6>
-        <h6>
+        <h6 className="ml40">
           <Link to="/mission">Our Mission</Link>
         </h6>
-        <h6>
+        <h6 className="ml40">
           <Link to="/about-us">About Us</Link>
         </h6>
-        <h6>
-          <Link className="btn btn--off-white" to="/contact-us">
+        <h6 className="ml40">
+          <Button type="off-white" to="/contact-us">
             Contact Us
-          </Link>
+          </Button>
         </h6>
       </div>
     </div>

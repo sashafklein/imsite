@@ -3,7 +3,7 @@ const path = require("path")
 module.exports = {
   siteMetadata: {
     title: `Immunity Score`,
-    description: `A safe and secure way to demonstrate immunity.`,
+    description: `A safe & secure way to demonstrate immunity.`,
     author: `@imsafepass`,
   },
   plugins: [
@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
-        alias: ["components", "pages", "styles", "images"].reduce(
+        alias: ["components", "pages", "styles", "images", "utils"].reduce(
           (obj, el) => ({
             ...obj,
             [`@${el}`]: path.resolve(__dirname, `src/${el}`),
@@ -43,17 +43,16 @@ module.exports = {
         extensions: ["ts", "scss"],
       },
     },
-    `gatsby-plugin-typescript`,
     {
       resolve: "gatsby-plugin-transition-link",
       options: {
-        layout: require.resolve(`./src/components/layout/index.tsx`),
+        layout: require.resolve(`./src/components/layout/index.js`),
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Heebo:wght@400;700`, `Roboto`],
+        fonts: [`Heebo\:400,700`, `Roboto`],
         display: "swap",
       },
     },

@@ -1,63 +1,42 @@
 h1 {
-  font-family: "Heebo";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 51px;
-  letter-spacing: -0.02em;
+  @include h1;
 }
 
 h2 {
-  font-family: "Heebo";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 40px;
-  letter-spacing: -0.03em;
+  @include h2;
 }
 
 h3 {
-  font-family: "Heebo";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 40px;
-  letter-spacing: -0.03em;
+  @include h3;
 }
 
 h4 {
-  font-family: "Heebo";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 35px;
+  @include h4;
 }
 
 h5 {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 28px;
+  @include h5;
 }
 
 h6 {
-  font-family: "Heebo";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 23px;
+  @include h6;
 }
 
 p,
-li {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 24px;
+li,
+button {
+  @include p;
 }
 
 a {
   text-decoration: none;
+  font-family: "Heebo";
+}
+
+.center-text--resp {
+  text-align: center;
+
+  @media only screen and (min-width: $breakpoint-desk) {
+    text-align: left;
+  }
 }

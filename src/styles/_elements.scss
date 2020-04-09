@@ -1,13 +1,21 @@
-.btn {
-  border-radius: 100px;
-  width: 130px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.radial-blur-circle {
+  width: 350px;
+  height: 350px;
+  background-image: radial-gradient(
+    circle closest-side,
+    transparentize($color-royal-blue, 0.4),
+    transparent
+  );
 
-  &--off-white {
-    background: $color-off-white;
-    color: $color-royal-blue;
+  &--right {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+  }
+
+  &--left {
+    position: absolute;
+    top: -20px;
+    left: 0px;
   }
 }

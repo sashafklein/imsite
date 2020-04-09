@@ -1,0 +1,47 @@
+.bg--white {
+  background-color: $color-white;
+}
+
+.bg--royal-blue {
+  background-color: $color-royal-blue;
+}
+
+.bg--black {
+  background-color: $color-black;
+}
+
+.bg--off-white {
+  background-color: $color-off-white;
+}
+
+.bg--transparent {
+  background-color: transparent;
+}
+
+.bg--gradient--off-white-white {
+  background: linear-gradient(180deg, $color-off-white 0%, $color-white 100%);
+}
+
+.color--black {
+  color: $color-black;
+}
+
+.color--off-white {
+  color: $color-off-white;
+
+  a:not(.btn) {
+    color: $color-off-white;
+  }
+}
+
+.color--dark-purple {
+  color: $color-dark-purple;
+}
+
+.color--white {
+  color: $color-white;
+}
+
+.color--royal-blue {
+  color: $color-royal-blue;
+}
