@@ -40,6 +40,10 @@
 
 .color--white {
   color: $color-white;
+
+  a:not(.btn) {
+    color: $color-white;
+  }
 }
 
 .color--royal-blue {

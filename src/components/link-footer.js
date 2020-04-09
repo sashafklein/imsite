@@ -6,7 +6,7 @@ import Button from "./button"
 
 const LinkFooter = ({ to, text }) => (
   <div className="bg--royal-blue">
-    <div className="container--large h250 flex flex-jc--fe flex-ai--c">
+    <div className="container--large h250 h150--resp flex flex-jc--fe flex-jc--c--resp flex-ai--c">
       <Button type="transparent-white,icon,h2" to={to} className="color--white">
         <h2>{text}</h2>
         <RightArrow className="--white" />

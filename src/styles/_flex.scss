@@ -5,6 +5,26 @@
     flex-direction: column;
   }
 
+  &-row-r {
+    flex-direction: row-reverse;
+
+    &--resp {
+      @media only screen and (max-width: $breakpoint-desk) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &-col-r {
+    flex-direction: column-reverse;
+
+    &--resp {
+      @media only screen and (max-width: $breakpoint-desk) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
   &-jc {
     &--sb {
       justify-content: space-between;
@@ -24,6 +44,21 @@
 
     &--fe {
       justify-content: flex-end;
+    }
+
+    @media only screen and (max-width: $breakpoint-desk) {
+      &--fe--resp {
+        justify-content: flex-end;
+      }
+      &--c--resp {
+        justify-content: center;
+      }
+      &--sa--resp {
+        justify-content: space-around;
+      }
+      &--fa--resp {
+        justify-content: flex-start;
+      }
     }
   }
 
@@ -53,5 +88,17 @@
     &--fs {
       align-self: flex-start;
     }
+  }
+}
+
+.hidden-sm {
+  @media only screen and (max-width: $breakpoint-desk) {
+    display: none;
+  }
+}
+
+.hidden-lg {
+  @media only screen and (min-width: $breakpoint-desk) {
+    display: none;
   }
 }

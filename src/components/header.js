@@ -1,46 +1,40 @@
-import Link from "gatsby-plugin-transition-link/AniLink"
 import React from "react"
+import { Link } from "gatsby"
 
 import Logo from "@images/logo-white.svg"
+import Hamburger from "@images/icons/hamburger.svg"
 import Button from "./button"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, menuItems, menuOpen, setMenuOpen }) => (
   <header className="site-header bg--royal-blue h100 flex flex-al--c">
     <div className="container--large flex flex-ai--c flex-jc--sb color--off-white">
-      <div className="flex flex-jc--fs flex-ai--c">
+      <div className="site-header__left flex flex-jc--fs flex-ai--c">
         <Logo />
         <h4 className="ml15">
-          <Link fade duration={0.3} to="/">
-            {siteTitle}
-          </Link>
+          <Link to="/">{siteTitle}</Link>
         </h4>
       </div>
-      <div className="flex flex-jc--fe flex-ai--c">
-        <h6>
-          <Link fade duration={0.3} to="/">
-            Home
-          </Link>
-        </h6>
-        <h6 className="ml40">
-          <Link fade duration={0.3} to="/solution">
-            Our Solution
-          </Link>
-        </h6>
-        <h6 className="ml40">
-          <Link fade duration={0.3} to="/mission">
-            Our Mission
-          </Link>
-        </h6>
-        <h6 className="ml40">
-          <Link fade duration={0.3} to="/about-us">
-            About Us
-          </Link>
-        </h6>
-        <h6 className="ml40">
-          <Button type="off-white" to="/contact-us">
-            Contact Us
-          </Button>
-        </h6>
+      <div className="flex flex-jc--fe flex-ai--c hidden-sm">
+        {menuItems.map((item, ind) => (
+          <h6 className={ind === 0 ? "" : "ml40"} key={ind}>
+            {ind === menuItems.length - 1 ? (
+              <Button type="off-white" to={item.to}>
+                {item.text}
+              </Button>
+            ) : (
+              <Link to={item.to}>{item.text}</Link>
+            )}
+          </h6>
+        ))}
+      </div>
+      <div className="hidden-lg">
+        <Hamburger
+          height={36}
+          className="cursor-pointer"
+          onClick={() => {
+            setMenuOpen(!menuOpen)
+          }}
+        />
       </div>
     </div>
   </header>

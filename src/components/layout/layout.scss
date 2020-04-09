@@ -9,3 +9,37 @@ main .page,
 main.page > div {
   width: 100%;
 }
+
+.nav {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  height: calc(100vh - 100px);
+  width: 100vw;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: $color-royal-blue;
+
+  h2 {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &--open {
+    .nav {
+      z-index: 2;
+      opacity: 1;
+    }
+
+    @for $i from 0 through 7 {
+      h2:nth-child(#{$i}) {
+        transition-delay: #{0.12 + $i * 0.06}s;
+      }
+    }
+
+    h2 {
+      opacity: 1;
+    }
+  }
+}

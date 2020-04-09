@@ -14,10 +14,6 @@ body {
   width: 100%;
 }
 
-.hidden-sm {
-  display: none;
-}
-
 .relative {
   position: relative;
 }
@@ -166,9 +162,5 @@ body {
   }
   .col-12 {
     flex-basis: $width;
-  }
-
-  .hidden-sm {
-    display: block;
   }
 }

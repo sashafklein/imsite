@@ -1,18 +1,22 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "../header"
 import "./layout.scss"
 
+const menuItems = [
+  { to: "/", text: "Home" },
+  { to: "/solution", text: "Our Solution" },
+  { to: "/mission", text: "Our Mission" },
+
+  { to: "/about-us", text: "About Us" },
+  { to: "/contact-us", text: "Contact Us" },
+]
+
 const Layout = ({ children }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,12 +28,28 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <div className={menuOpen ? "nav--open" : ""}>
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        menuItems={menuItems}
+      />
       <div>
         <main>{children}</main>
       </div>
-    </>
+      <div className="nav">
+        <div className="container--large">
+          {menuItems.map((item, ind) => (
+            <h2 className="color--white mt30" key={ind}>
+              <Link to={item.to} onClick={() => setMenuOpen(false)}>
+                {item.text}
+              </Link>
+            </h2>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
 

@@ -62,13 +62,13 @@ const IndexPage = () => {
 
       <img
         src={assets.heroWave}
-        className="bg--transparent full-width"
+        className="bg--transparent full-width pt40--resp"
         style={{ marginTop: "-15vw" }}
       />
 
       <div className="bg--white">
         <div className="container--large">
-          <div className="row color--dark-purple mv60 flex-jc--c">
+          <div className="row color--dark-purple mv60 flex-jc--c mb30--resp">
             <h4>
               We're looking for partners in healthcare, government, tech, and
               more.
@@ -87,16 +87,15 @@ const IndexPage = () => {
       <div className="bg--gradient--off-white-white">
         <div className="container--small pt80">
           <div className="row">
-            <div className="col-6 relative">
+            <div className="col-6 relative mb40--resp">
               <img
                 src={assets.metricIll}
-                width={360}
-                className="ml10 ml0--resp"
+                className="ml10 ml0--resp w365 w250--resp"
                 style={{ zIndex: 1 }}
               />
               <div className="radial-blur-circle radial-blur-circle--right" />
             </div>
-            <div className="col-6 flex flex-col">
+            <div className="col-6 flex flex-col center-text--resp">
               <h2 className="color--dark-purple pr100 pr0--resp">
                 A metric of health available to all
               </h2>
@@ -106,15 +105,19 @@ const IndexPage = () => {
                 responsibility. Unlike the swab-based tests in short supply,
                 {` ${title}`} testing will be broadly available.
               </p>
-              <Button type="transparent,icon">
+              <Button
+                to="/solution"
+                type="transparent,icon"
+                className="flex-jc--c--resp"
+              >
                 <h4>Learn more</h4>
                 <RightArrow />
               </Button>
             </div>
           </div>
 
-          <div className="row mt100">
-            <div className="col-6 flex flex-col">
+          <div className="row mt100 flex-col-r--resp">
+            <div className="col-6 flex flex-col center-text--resp">
               <h2 className="color--dark-purple pr40 pr0--resp">
                 A way to find our new normal sooner
               </h2>
@@ -125,16 +128,20 @@ const IndexPage = () => {
                 focused on this problem, and will be able to solve it quickly
                 without compromising public health or individual security.
               </p>
-              <Button type="transparent,icon">
+              <Button
+                to="/solution"
+                type="transparent,icon"
+                className="flex-jc--c--resp"
+              >
                 <h4>Learn more</h4>
                 <RightArrow />
               </Button>
             </div>
 
-            <div className="col-6 flex flex-col relative pl80 pl0--resp">
+            <div className="col-6 flex flex-col relative pl80 pl0--resp mb40--resp">
               <img
                 src={assets.newNormalIll}
-                width={450}
+                className="w450 w300--resp"
                 style={{ zIndex: 1 }}
               />
               <div className="radial-blur-circle radial-blur-circle--left" />
@@ -142,16 +149,15 @@ const IndexPage = () => {
           </div>
 
           <div className="row mt100 pb100">
-            <div className="col-6 relative">
+            <div className="col-6 relative mb40--resp">
               <img
                 src={assets.institutionsIll}
-                width={360}
-                className="ml10 ml0--resp"
+                className="ml10 ml0--resp w365 w250--resp"
                 style={{ zIndex: 1 }}
               />
               <div className="radial-blur-circle radial-blur-circle--right" />
             </div>
-            <div className="col-6 flex flex-col">
+            <div className="col-6 flex flex-col center-text--resp">
               <h2 className="color--dark-purple pr100 pr0--resp">
                 A vital institution built for trust
               </h2>
@@ -162,7 +168,11 @@ const IndexPage = () => {
                 Covid-19 immunity without compromising privacy or letting
                 personal data fall into the wrong hands.
               </p>
-              <Button type="transparent,icon">
+              <Button
+                to="/solution"
+                type="transparent,icon"
+                className="flex-jc--c--resp"
+              >
                 <h4>Learn more</h4>
                 <RightArrow />
               </Button>

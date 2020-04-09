@@ -66,6 +66,10 @@
   .h#{$heightVal} {
     height: #{$heightVal}px;
   }
+
+  .w#{$heightVal} {
+    width: #{$heightVal}px;
+  }
 }
 
 // To override, *all* resp classes need to follow in CSS
@@ -137,6 +141,10 @@
 
     .h#{$heightVal}--resp {
       height: #{$heightVal}px;
+    }
+
+    .w#{$heightVal}--resp {
+      width: #{$heightVal}px;
     }
   }
 }
