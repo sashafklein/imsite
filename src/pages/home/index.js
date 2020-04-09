@@ -113,11 +113,10 @@ const IndexPage = () => {
               <img
                 alt="Illustration of doctor with clipboard"
                 src={assets.heroIll}
-                width={320}
-                className="mt20 ml40--resp"
+                className="mt20 mh20 mr0--resp ml40--resp w325 w250--resp"
               />
             </div>
-            <div className="flex-col col-8 color--white center-text--resp row">
+            <div className="flex-col col-8 color--white center--resp left row">
               <h1>{description}</h1>
               <h5>{heroDescription}</h5>
             </div>
@@ -135,14 +134,14 @@ const IndexPage = () => {
       <div className="bg--white">
         <div className="container--large">
           <div className="row color--dark-purple mv60 flex-jc--c mb30--resp">
-            <h4>
+            <h4 className="center--resp">
               We're looking for partners in healthcare, government, tech, and
               more.
             </h4>
             <Button
               to="/contact-us"
               type="dark-purple,large"
-              className="mh50 mh0--resp mv50--resp"
+              className="mh50 mh0--resp mv50--resp w125--resp"
             >
               Get Involved
             </Button>
@@ -162,7 +161,7 @@ const IndexPage = () => {
               />
               <div className="radial-blur-circle radial-blur-circle--right" />
             </div>
-            <div className="col-6 flex flex-col center-text--resp">
+            <div className="col-6 flex flex-col center--resp left">
               <h2 className="color--dark-purple pr100 pr0--resp">
                 A metric of health available to all
               </h2>
@@ -184,7 +183,7 @@ const IndexPage = () => {
           </div>
 
           <div className="row mt100 flex-col-r--resp">
-            <div className="col-6 flex flex-col center-text--resp">
+            <div className="col-6 flex flex-col center--resp left">
               <h2 className="color--dark-purple pr40 pr0--resp">
                 A way to find our new normal sooner
               </h2>
@@ -226,7 +225,7 @@ const IndexPage = () => {
               />
               <div className="radial-blur-circle radial-blur-circle--right" />
             </div>
-            <div className="col-6 flex flex-col center-text--resp">
+            <div className="col-6 flex flex-col center--resp left">
               <h2 className="color--dark-purple pr100 pr0--resp">
                 A vital institution built for trust
               </h2>

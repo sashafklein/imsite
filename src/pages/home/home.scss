@@ -9,7 +9,14 @@
         padding-left: 120px;
       }
     }
+
+    &.hidden-lg > div {
+      &:not(:first-child) {
+        padding-left: 40px;
+      }
+    }
   }
+
   @media only screen and (min-width: $breakpoint-large) {
     &__horizontal-scroll {
       justify-content: space-between;

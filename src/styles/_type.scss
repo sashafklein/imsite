@@ -33,10 +33,10 @@ a {
   font-family: "Heebo";
 }
 
-.center-text--resp {
-  text-align: center;
+.left {
+  text-align: left;
+}
 
-  @media only screen and (min-width: $breakpoint-desk) {
-    text-align: left;
-  }
+.center--resp {
+  text-align: center;
 }
