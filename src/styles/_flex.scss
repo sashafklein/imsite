@@ -7,6 +7,12 @@
 
   &-row {
     flex-direction: row;
+
+    &--resp {
+      @media only screen and (max-width: $breakpoint-desk) {
+        flex-direction: row;
+      }
+    }
   }
 
   &-row-r {

@@ -148,3 +148,13 @@
     }
   }
 }
+
+.w100p {
+  width: 100%;
+}
+
+.w100p--resp {
+  @media only screen and (max-width: $breakpoint-desk) {
+    width: 100%;
+  }
+}
