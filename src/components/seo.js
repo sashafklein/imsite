@@ -36,6 +36,10 @@ function SEO({ description, lang, meta, title, image }) {
 
   const metaDescription = description || md.heroDescription
 
+  const finalTitle = `${title ? `${md.title} - ${title}` : md.title} | ${
+    md.description
+  }`
+
   return (
     <Location>
       {({ location }) => (
@@ -43,9 +47,7 @@ function SEO({ description, lang, meta, title, image }) {
           htmlAttributes={{
             lang,
           }}
-          title={`${title ? `${md.title} - ${title}` : md.title} | ${
-            md.description
-          }`}
+          title={finalTitle}
           meta={[
             {
               name: `description`,
@@ -61,7 +63,7 @@ function SEO({ description, lang, meta, title, image }) {
             },
             {
               name: `twitter:title`,
-              content: title,
+              content: finalTitle,
             },
             {
               name: `twitter:description`,
@@ -73,7 +75,7 @@ function SEO({ description, lang, meta, title, image }) {
             },
             {
               property: `og:title`,
-              content: title,
+              content: finalTitle,
             },
             {
               property: `og:description`,
@@ -101,7 +103,7 @@ function SEO({ description, lang, meta, title, image }) {
             },
             {
               property: `og:image:alt`,
-              content: title,
+              content: finalTitle,
             },
             {
               property: `og:image:secure_url`,
