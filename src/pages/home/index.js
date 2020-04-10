@@ -127,7 +127,7 @@ const IndexPage = () => {
       <img
         src={assets.heroWave}
         alt=""
-        className="bg--transparent full-width pt40--resp"
+        className="bg--transparent w100p pt40--resp"
         style={{ marginTop: "-15vw" }}
       />
 
@@ -252,7 +252,7 @@ const IndexPage = () => {
       <img
         alt=""
         src={assets.applicationsWave}
-        className="bg--transparent full-width"
+        className="bg--transparent w100p"
         style={{ marginBottom: "-5px" }}
       />
 

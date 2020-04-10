@@ -27,11 +27,11 @@ const ContactUs = () => {
             <div className="flex flex-col flex-ai--fs color--black col-6 flex-jc--fs mb50">
               <h1 className="mt0 color--dark-purple">Leave us a note</h1>
               <p>
-                We're committed to building a tool that helps our world recover
-                from this crisis while respecting our privacy and fundamental
-                rights. As we scale up as quickly as possible, we're forming a
-                team of engineers, designers, medical professors, and
-                contrarians, and we'd love to hear from you!
+                We're committed to helping us out of this crisis while
+                respecting privacy and fundamental rights. As we scale up as
+                quickly as possible, we're forming a team of engineers,
+                designers, medical professors, and contrarians, and we'd love to
+                hear from you!
               </p>
               <p>Have questions or concerns? Want to help? Let us know!</p>
             </div>
@@ -49,7 +49,7 @@ const ContactUs = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className="w500 full-width--resp"
+                  className="w500 w100p--resp"
                 />
               </label>
               <label className="flex flex-col mv10">
@@ -59,7 +59,7 @@ const ContactUs = () => {
                   name="email"
                   id="email"
                   required
-                  className="w500 full-width--resp"
+                  className="w500 w100p--resp"
                 />
               </label>
               <label className="flex flex-col mv10">
@@ -69,7 +69,7 @@ const ContactUs = () => {
                   name="subject"
                   id="subject"
                   required
-                  className="w500 full-width--resp"
+                  className="w500 w100p--resp"
                 />
               </label>
               <label className="flex flex-col mv10">
@@ -79,21 +79,16 @@ const ContactUs = () => {
                   id="message"
                   required
                   rows="5"
-                  className="w500 full-width--resp"
+                  className="w500 w100p--resp"
                 />
               </label>
               <div className="row mt20">
                 <button
-                  className="btn btn--royal-blue w150 w100p--resp mr20 mr0--resp mb20--resp"
+                  className="btn btn--royal-blue w150 w100p--resp"
                   type="submit"
                 >
                   Send
                 </button>
-                <input
-                  className="btn btn--dark-purple w150 w100p--resp"
-                  type="reset"
-                  value="Clear"
-                />
               </div>
             </form>
           </div>
