@@ -11,7 +11,7 @@ import SEO from "@components/seo"
 import Button from "@components/button"
 import LinkFooter from "@components/link-footer"
 
-import carouselNodes from "./carouselContent"
+import carouselNodes from "@utils/carouselContent"
 
 import "./home.scss"
 

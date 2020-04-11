@@ -28,7 +28,6 @@ const contentData = ({ title, assets }) => [
 ]
 
 export default data => {
-  console.log("DATA", data)
   const content = contentData(data)
   return content.map(({ title, asset, width, content }, ind) => (
     <div className="flex flex-col pb40--resp" key={title}>
