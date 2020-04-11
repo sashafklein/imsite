@@ -3,7 +3,6 @@ import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 import Button from "@components/button"
-import ShortArrowLeft from "@images/icons/short-arrow-left.svg"
 import ShortArrowRight from "@images/icons/short-right-arrow.svg"
 
 import "./carousel.scss"
