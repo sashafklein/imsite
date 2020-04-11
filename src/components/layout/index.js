@@ -7,7 +7,7 @@ import Footer from "../footer"
 import "./layout.scss"
 
 const menuItems = [
-  { to: "/", text: "Home" },
+  // { to: "/", text: "Home" },
   // { to: "/solution", text: "Our Solution" },
   // { to: "/mission", text: "Our Mission" },
 
