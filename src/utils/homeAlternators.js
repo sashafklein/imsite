@@ -1,4 +1,4 @@
-export default (assets, title) => [
+export default ({ assets, title }) => [
   {
     img: {
       src: assets.metricIll,

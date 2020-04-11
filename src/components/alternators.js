@@ -11,26 +11,28 @@ const Alternators = ({ alternators }) => (
         {
           title,
           content,
-          img,
-          button: { text = "Learn more", to = "/solution" },
+          img: { src, className },
+          button = { text: "Learn more", to: "/solution" },
         },
         ind
       ) => {
         const first = ind === 0
         const last = ind === alternators.length - 1
-        const even = ind % 2 === 0
+        const odd = ind % 2 !== 0
+
+        const { text, to } = button
 
         return (
           <div
             className={`row ${first ? "" : "mt100"} ${last ? "pb100" : ""} ${
-              even ? "flex-col-r flex-col--resp" : ""
+              odd ? "flex-row-r flex-col--resp" : ""
             }`}
           >
             <div className="col-6 relative mb40--resp">
               <img
                 alt={title}
-                src={img.src}
-                className={img.className}
+                src={src}
+                className={className}
                 style={{ zIndex: 1 }}
               />
               <div className="radial-blur-circle radial-blur-circle--right" />

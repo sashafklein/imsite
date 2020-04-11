@@ -7,31 +7,36 @@
 
   &-row {
     flex-direction: row;
-
-    &--resp {
-      @media only screen and (max-width: $breakpoint-desk) {
-        flex-direction: row;
-      }
-    }
   }
 
   &-row-r {
     flex-direction: row-reverse;
-
-    &--resp {
-      @media only screen and (max-width: $breakpoint-desk) {
-        flex-direction: row-reverse;
-      }
-    }
   }
 
   &-col-r {
     flex-direction: column-reverse;
+  }
+  &-row-r--resp {
+    @media only screen and (max-width: $breakpoint-desk) {
+      flex-direction: row-reverse;
+    }
+  }
 
-    &--resp {
-      @media only screen and (max-width: $breakpoint-desk) {
-        flex-direction: column-reverse;
-      }
+  &-row--resp {
+    @media only screen and (max-width: $breakpoint-desk) {
+      flex-direction: row;
+    }
+  }
+
+  &-col-r--resp {
+    @media only screen and (max-width: $breakpoint-desk) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-col--resp {
+    @media only screen and (max-width: $breakpoint-desk) {
+      flex-direction: column;
     }
   }
 
