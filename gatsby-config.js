@@ -2,9 +2,9 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: `Immunity Score`,
+    title: `ImSafe Pass`,
     description: `A safe & secure way to demonstrate immunity.`,
-    heroDescription: `We're building a solution to help us all get back to normal in the wake of Covid-19 that serves public health and respects personal privacy.`,
+    heroDescription: `We're building a solution to help us all get back to normal in the wake of COVID-19 that serves public health and respects personal privacy.`,
     author: `@imsafepass`,
     siteURL: `https://quizzical-goldwasser-10d083.netlify.com`,
   },

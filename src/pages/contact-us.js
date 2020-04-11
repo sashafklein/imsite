@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { getAssets } from "@utils/getAssets"
 import LinkFooter from "@components/link-footer"
 import SEO from "@components/seo"
 
@@ -17,7 +16,6 @@ const ContactUs = () => {
     }
   `)
 
-  const assets = getAssets(allFile)
   return (
     <div className="page contact-us">
       <SEO title="Contact Us" />
