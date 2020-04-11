@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import RightArrow from "@images/icons/right-arrow.svg"
 import ShortArrowRight from "@images/icons/short-right-arrow.svg"
 import ShortArrowLeft from "@images/icons/short-arrow-left.svg"
 
@@ -10,8 +9,10 @@ import { getAssets } from "@utils/getAssets"
 import SEO from "@components/seo"
 import Button from "@components/button"
 import LinkFooter from "@components/link-footer"
+import Alternators from "@components/alternators"
 
 import carouselNodes from "@utils/carouselContent"
+import homeAlternators from "@utils/homeAlternators"
 
 import "./home.scss"
 
@@ -95,99 +96,7 @@ const IndexPage = () => {
       <div className="bg--gradient--off-white-white">
         <div className="container--small pt80">
           <div className="row">
-            <div className="col-6 relative mb40--resp">
-              <img
-                alt="Illustration of logo with ruler"
-                src={assets.metricIll}
-                className="ml10 ml0--resp w365 w250--resp"
-                style={{ zIndex: 1 }}
-              />
-              <div className="radial-blur-circle radial-blur-circle--right" />
-            </div>
-            <div className="col-6 flex flex-col center--resp left">
-              <h2 className="color--dark-purple pr100 pr0--resp">
-                A metric of health available to all
-              </h2>
-              <p className="mr20 mr0--resp">
-                {title} uses a combination of medical testing and recent
-                lifestyle factors to evaluate each person’s risk and
-                responsibility. Unlike the swab-based tests in short supply,
-                {` ${title}`} testing will be broadly available.
-              </p>
-              <Button
-                to="/solution"
-                type="transparent,icon"
-                className="flex-jc--c--resp hidden"
-              >
-                <h4>Learn more</h4>
-                <RightArrow />
-              </Button>
-            </div>
-          </div>
-
-          <div className="row mt100 flex-col-r--resp">
-            <div className="col-6 flex flex-col center--resp left">
-              <h2 className="color--dark-purple pr40 pr0--resp">
-                A way to find our new normal sooner
-              </h2>
-              <p>
-                If we don't have a solution for demonstrating immunity at scale,
-                we could see an incredibly prolonged lockdown with unimaginable
-                social and economic consequences. Immunity Score is uniquely
-                focused on this problem, and will be able to solve it quickly
-                without compromising public health or individual security.
-              </p>
-              <Button
-                to="/solution"
-                type="transparent,icon"
-                className="flex-jc--c--resp hidden"
-              >
-                <h4>Learn more</h4>
-                <RightArrow />
-              </Button>
-            </div>
-
-            <div className="col-6 flex flex-col relative pl80 pl0--resp mb40--resp">
-              <img
-                alt="Illustration of friends hanging out"
-                src={assets.newNormalIll}
-                className="w450 w300--resp"
-                style={{ zIndex: 1 }}
-              />
-              <div className="radial-blur-circle radial-blur-circle--left" />
-            </div>
-          </div>
-
-          <div className="row mt100 pb100">
-            <div className="col-6 relative mb40--resp">
-              <img
-                alt="Illustration of man looking at blank canvas"
-                src={assets.institutionsIll}
-                className="ml10 ml0--resp w365 w250--resp"
-                style={{ zIndex: 1 }}
-              />
-              <div className="radial-blur-circle radial-blur-circle--right" />
-            </div>
-            <div className="col-6 flex flex-col center--resp left">
-              <h2 className="color--dark-purple pr100 pr0--resp">
-                A vital institution built for trust
-              </h2>
-              <p className="mr20 mr0--resp">
-                Everyday people don't trust large institutions with their
-                data—not government and not big tech. {title} exists solely to
-                facilitate the safe reintegration of society by verifying
-                COVID-19 immunity without compromising privacy or letting
-                personal data fall into the wrong hands.
-              </p>
-              <Button
-                to="/solution"
-                type="transparent,icon"
-                className="flex-jc--c--resp hidden"
-              >
-                <h4>Learn more</h4>
-                <RightArrow />
-              </Button>
-            </div>
+            <Alternators alternators={homeAlternators({ assets, title })} />
           </div>
         </div>
       </div>
