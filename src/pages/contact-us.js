@@ -1,21 +1,8 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import LinkFooter from "@components/link-footer"
 import SEO from "@components/seo"
 
 const ContactUs = () => {
-  const { allFile } = useStaticQuery(graphql`
-    query ContactQuery {
-      allFile(filter: { relativeDirectory: { eq: "home" } }) {
-        nodes {
-          publicURL
-          relativeDirectory
-          name
-        }
-      }
-    }
-  `)
-
   return (
     <div className="page contact-us">
       <SEO title="Contact Us" />

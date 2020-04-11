@@ -8,10 +8,10 @@ import "./layout.scss"
 
 const menuItems = [
   { to: "/", text: "Home" },
-  { to: "/solution", text: "Our Solution" },
-  { to: "/mission", text: "Our Mission" },
+  // { to: "/solution", text: "Our Solution" },
+  // { to: "/mission", text: "Our Mission" },
 
-  { to: "/about-us", text: "About Us" },
+  // { to: "/about-us", text: "About Us" },
   { to: "/contact-us", text: "Contact Us" },
 ]
 

@@ -117,7 +117,7 @@ const IndexPage = () => {
               <Button
                 to="/solution"
                 type="transparent,icon"
-                className="flex-jc--c--resp"
+                className="flex-jc--c--resp hidden"
               >
                 <h4>Learn more</h4>
                 <RightArrow />
@@ -140,7 +140,7 @@ const IndexPage = () => {
               <Button
                 to="/solution"
                 type="transparent,icon"
-                className="flex-jc--c--resp"
+                className="flex-jc--c--resp hidden"
               >
                 <h4>Learn more</h4>
                 <RightArrow />
@@ -182,7 +182,7 @@ const IndexPage = () => {
               <Button
                 to="/solution"
                 type="transparent,icon"
-                className="flex-jc--c--resp"
+                className="flex-jc--c--resp hidden"
               >
                 <h4>Learn more</h4>
                 <RightArrow />
