@@ -253,7 +253,7 @@ const IndexPage = () => {
           </div>
         </div>
 
-        <div className="container--large pb150">
+        <div className="container--large pb150 hidden-sm">
           <h4 className="left color--dark-purple">How it Works</h4>
           <img
             src={assets.diagram}

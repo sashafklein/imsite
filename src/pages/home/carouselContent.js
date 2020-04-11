@@ -30,7 +30,7 @@ const contentData = ({ title, assets }) => [
 export default data => {
   const content = contentData(data)
   return content.map(({ title, asset, width, content }, ind) => (
-    <div className="flex flex-col">
+    <div className="flex flex-col pb40--resp" key={title}>
       <div className="h400 flex flex-col flex-jc--fs">
         <img style={{ width }} alt={title} src={asset} />
       </div>
@@ -41,62 +41,3 @@ export default data => {
     </div>
   ))
 }
-
-//   <div className="flex flex-col">
-//     <div className="h400 flex flex-col flex-jc--fs">
-//       <img
-//         style={{ width: 450 }}
-//         alt="Illustration of doctor and patient"
-//         src={assets.healthcareWorkersIll}
-//       />
-//     </div>
-//     <div className="flex flex-col h250 flex-ai--fs left">
-//       <h4 className="color--dark-purple">Clearing Healthcare Workers</h4>
-//       <p>
-//         Healthcare works are at the highest risk for contracting COVID-19, but
-//         essential on-going care, such as eldercare, non-COVID outpatient and
-//         inpatient care, or dialysis, cannot be neglected long-term. With {title}
-//         , healthcare workers who have recovered from COVID-19 could safely
-//         return to the frontlines where they’re needed most.
-//       </p>
-//     </div>
-//   </div>,
-//   <div className="flex flex-col">
-//     <div className="h400 flex flex-col flex-jc--c">
-//       <img
-//         style={{ width: 300 }}
-//         src={assets.catchRideIll}
-//         alt="Illustration of car riding service"
-//       />
-//     </div>
-//     <div className="flex flex-col h250 flex-ai--fs left">
-//       <h4 className="color--dark-purple">Catching a ride</h4>
-//       <p>
-//         {title} will allow drivers and riders assess their individual risk when
-//         accepting a ride share arrangement. Rideshare partners will integrate
-//         Verified Immunity Scores into profiles, so that for example, an
-//         immunosuppressed customer could be paired with a high-scoring driver or
-//         only accept ride with a specialized disinfection protocol.
-//       </p>
-//     </div>
-//   </div>,
-//   <div className="flex flex-col">
-//     <div className="h400 flex flex-col flex-jc--fs">
-//       <img
-//         style={{ width: 300 }}
-//         src={assets.diningOutIll}
-//         alt="Illustration of two people eating"
-//       />
-//     </div>
-//     <div className="flex flex-col h250 flex-ai--fs left">
-//       <h4 className="color--dark-purple">Dining Out</h4>
-//       <p>
-//         Local restaurants have been some of the hardest hit by shelter-in-place
-//         orders, with many forced to shutter and layoff staff. A Verified
-//         Immunity Score will give restaurants the confidence to schedule
-//         non-contagious employees and welcome non-contagious guests to dine-in.
-//       </p>
-//     </div>
-//   </div>,
-// ]
-// ]
