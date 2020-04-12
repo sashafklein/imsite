@@ -51,16 +51,16 @@ const IndexPage = () => {
     <div className="home page">
       <SEO title="Home" />
       <div className="bg--royal-blue">
-        <div className="container--small mt80--neg--resp">
+        <div className="container--small mt80--neg--sm">
           <div className="row">
             <div className="col-4">
               <img
                 alt="Illustration of doctor with clipboard"
                 src={assets.heroIll}
-                className="mt20 mh20 mr0--resp ml40--resp w325 w250--resp"
+                className="mt20 mh20 mr0--sm ml40--sm w325 w250--sm"
               />
             </div>
-            <div className="flex-col col-8 color--white center--resp left row">
+            <div className="flex-col col-8 color--white center--sm left row">
               <h1>{description}</h1>
               <h5>{heroDescription}</h5>
             </div>
@@ -71,21 +71,21 @@ const IndexPage = () => {
       <img
         src={assets.heroWave}
         alt=""
-        className="bg--transparent w100p pt40--resp"
+        className="bg--transparent w100p pt40--sm"
         style={{ marginTop: "-15vw" }}
       />
 
       <div className="bg--white">
         <div className="container--large">
-          <div className="row color--dark-purple mv60 flex-jc--c mb30--resp">
-            <h4 className="center--resp">
+          <div className="row color--dark-purple mv60 flex-jc--c mb30--sm">
+            <h4 className="center--sm">
               We're looking for partners in healthcare, government, tech, and
               more.
             </h4>
             <Button
               to="/contact-us"
               type="dark-purple,large"
-              className="mh50 mh0--resp mv50--resp w125--resp"
+              className="mh50 mh0--sm mv50--sm w125--sm"
             >
               Get Involved
             </Button>
@@ -107,7 +107,7 @@ const IndexPage = () => {
       />
 
       <div className="row bg--off-white flex-col">
-        <div className="container--large pb100--resp">
+        <div className="container--large pb100--sm">
           <div className="relative">
             <h4 className="color--dark-purple left mt20 mb20 flex-as--fs">
               Potential applications

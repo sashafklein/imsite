@@ -25,10 +25,10 @@ const Alternators = ({ alternators }) => (
         return (
           <div
             className={`row ${first ? "" : "mt100"} ${last ? "pb100" : ""} ${
-              odd ? "flex-row-r flex-col--resp" : ""
+              odd ? "flex-row-r flex-col--sm" : ""
             }`}
           >
-            <div className="col-6 relative mb40--resp">
+            <div className="col-6 relative mb40--sm">
               <img
                 alt={title}
                 src={src}
@@ -37,13 +37,13 @@ const Alternators = ({ alternators }) => (
               />
               <div className="radial-blur-circle radial-blur-circle--right" />
             </div>
-            <div className="col-6 flex flex-col center--resp left">
-              <h2 className="color--dark-purple pr100 pr0--resp">{title}</h2>
-              <p className="mr20 mr0--resp">{content}</p>
+            <div className="col-6 flex flex-col center--sm left">
+              <h2 className="color--dark-purple pr100 pr0--sm">{title}</h2>
+              <p className="mr20 mr0--sm">{content}</p>
               <Button
                 to={to}
                 type="transparent,icon"
-                className="flex-jc--c--resp hidden"
+                className="flex-jc--c--sm hidden"
               >
                 <h4>{text}</h4>
                 <RightArrow />

@@ -8,7 +8,7 @@ const ContactUs = () => {
       <SEO title="Contact Us" />
       <div className="bg--off-white">
         <div className="container pb100">
-          <div className="row flex-ai--fs flex-col--resp">
+          <div className="row flex-ai--fs flex-col--sm">
             <div className="flex flex-col flex-ai--fs color--black col-6 flex-jc--fs mb50">
               <h1 className="mt0 color--dark-purple">Leave us a note</h1>
               <p>
@@ -25,7 +25,7 @@ const ContactUs = () => {
               method="post"
               netlify-honeypot="bot-field"
               data-netlify="true"
-              className="flex flex-col col-5 w100p--resp"
+              className="flex flex-col col-5 w100p--sm"
             >
               <input type="hidden" name="bot-field" />
               <label className="flex flex-col mv10">
@@ -34,7 +34,7 @@ const ContactUs = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className="w500 w100p--resp"
+                  className="w500 w100p--sm"
                 />
               </label>
               <label className="flex flex-col mv10">
@@ -44,7 +44,7 @@ const ContactUs = () => {
                   name="email"
                   id="email"
                   required
-                  className="w500 w100p--resp"
+                  className="w500 w100p--sm"
                 />
               </label>
               <label className="flex flex-col mv10">
@@ -54,7 +54,7 @@ const ContactUs = () => {
                   name="subject"
                   id="subject"
                   required
-                  className="w500 w100p--resp"
+                  className="w500 w100p--sm"
                 />
               </label>
               <label className="flex flex-col mv10">
@@ -64,12 +64,12 @@ const ContactUs = () => {
                   id="message"
                   required
                   rows="5"
-                  className="w500 w100p--resp"
+                  className="w500 w100p--sm"
                 />
               </label>
               <div className="row mt20">
                 <button
-                  className="btn btn--royal-blue w150 w100p--resp"
+                  className="btn btn--royal-blue w150 w100p--sm"
                   type="submit"
                 >
                   Send

@@ -3,15 +3,23 @@
 .carousel-root {
   li.slide {
     background-color: transparent;
+    justify-content: center;
 
-    > div > div {
-      align-items: center;
-      text-align: center;
+    img {
+      width: auto;
+      height: 100%;
     }
   }
 
+  .slider-wrapper {
+    height: 86vh;
+  }
+
+  .slider {
+    height: 90%;
+  }
+
   .control-dots {
-    display: none;
     padding-left: 0;
     margin-top: 30px;
 
@@ -25,9 +33,5 @@
         background-color: $color-dark-purple;
       }
     }
-  }
-
-  p {
-    padding: 0 10px;
   }
 }

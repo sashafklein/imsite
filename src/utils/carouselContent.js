@@ -1,5 +1,7 @@
 import React from "react"
 
+import { roundTo } from "./number"
+
 const contentData = ({ shortTitle, assets }) => [
   {
     width: 450,
@@ -29,13 +31,14 @@ const contentData = ({ shortTitle, assets }) => [
 
 export default data => {
   const content = contentData(data)
+
   return content.map(({ title, asset, width, content }, ind) => (
-    <div className="flex flex-col pb40--resp" key={title}>
-      <div className="h400 flex flex-col flex-jc--c">
-        <img style={{ width }} alt={title} src={asset} />
+    <div className="flex flex-col pb40--sm flex-ai--c" key={title}>
+      <div className={`h400--lg flex flex-col flex-jc--c h250--sm mt30--sm`}>
+        <img className={`w${roundTo(width)}--lg`} alt={title} src={asset} />
       </div>
-      <div className="flex flex-col h250 flex-ai--fs left">
-        <h4 className="color--dark-purple">{title}</h4>
+      <div className="flex flex-col h250--sm flex-ai--fs flex-ai--c--sm">
+        <h4 className="color--dark-purple mb20--sm mt40--sm center">{title}</h4>
         <p>{content}</p>
       </div>
     </div>

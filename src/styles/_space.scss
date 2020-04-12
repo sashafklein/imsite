@@ -78,72 +78,143 @@
   $heightVal: $i * 25;
 
   @media only screen and (max-width: $breakpoint-desk) {
-    .m#{$spacerVal}--resp {
+    .m#{$spacerVal}--sm {
       margin: #{$spacerVal}px;
     }
-    .mt#{$spacerVal}--resp {
+    .mt#{$spacerVal}--sm {
       margin-top: #{$spacerVal}px;
     }
-    .mb#{$spacerVal}--resp {
+    .mb#{$spacerVal}--sm {
       margin-bottom: #{$spacerVal}px;
     }
-    .ml#{$spacerVal}--resp {
+    .ml#{$spacerVal}--sm {
       margin-left: #{$spacerVal}px;
     }
-    .mr#{$spacerVal}--resp {
+    .mr#{$spacerVal}--sm {
       margin-right: #{$spacerVal}px;
     }
-    .mv#{$spacerVal}--resp {
+    .mv#{$spacerVal}--sm {
       margin-top: #{$spacerVal}px;
       margin-bottom: #{$spacerVal}px;
     }
-    .mh#{$spacerVal}--resp {
+    .mh#{$spacerVal}--sm {
       margin-left: #{$spacerVal}px;
       margin-right: #{$spacerVal}px;
     }
 
-    .p#{$spacerVal}--resp {
+    .p#{$spacerVal}--sm {
       padding: #{$spacerVal}px;
     }
-    .pt#{$spacerVal}--resp {
+    .pt#{$spacerVal}--sm {
       padding-top: #{$spacerVal}px;
     }
-    .pb#{$spacerVal}--resp {
+    .pb#{$spacerVal}--sm {
       padding-bottom: #{$spacerVal}px;
     }
-    .pl#{$spacerVal}--resp {
+    .pl#{$spacerVal}--sm {
       padding-left: #{$spacerVal}px;
     }
-    .pr#{$spacerVal}--resp {
+    .pr#{$spacerVal}--sm {
       padding-right: #{$spacerVal}px;
     }
-    .pv#{$spacerVal}--resp {
+    .pv#{$spacerVal}--sm {
       padding-top: #{$spacerVal}px;
       padding-bottom: #{$spacerVal}px;
     }
-    .ph#{$spacerVal}--resp {
+    .ph#{$spacerVal}--sm {
       padding-left: #{$spacerVal}px;
       padding-right: #{$spacerVal}px;
     }
 
-    .mt#{$spacerVal}--neg--resp {
+    .mt#{$spacerVal}--neg--sm {
       margin-top: -#{$spacerVal}px;
     }
-    .mb#{$spacerVal}--neg--resp {
+    .mb#{$spacerVal}--neg--sm {
       margin-bottom: -#{$spacerVal}px;
     }
-    .ml#{$spacerVal}--neg--resp {
+    .ml#{$spacerVal}--neg--sm {
       margin-left: -#{$spacerVal}px;
     }
-    .mr#{$spacerVal}--neg--resp {
+    .mr#{$spacerVal}--neg--sm {
       margin-right: -#{$spacerVal}px;
     }
 
-    .h#{$heightVal}--resp {
+    .h#{$heightVal}--sm {
       height: #{$heightVal}px;
     }
 
-    .w#{$heightVal}--resp {
+    .w#{$heightVal}--sm {
+      width: #{$heightVal}px;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-desk) {
+    .m#{$spacerVal}--lg {
+      margin: #{$spacerVal}px;
+    }
+    .mt#{$spacerVal}--lg {
+      margin-top: #{$spacerVal}px;
+    }
+    .mb#{$spacerVal}--lg {
+      margin-bottom: #{$spacerVal}px;
+    }
+    .ml#{$spacerVal}--lg {
+      margin-left: #{$spacerVal}px;
+    }
+    .mr#{$spacerVal}--lg {
+      margin-right: #{$spacerVal}px;
+    }
+    .mv#{$spacerVal}--lg {
+      margin-top: #{$spacerVal}px;
+      margin-bottom: #{$spacerVal}px;
+    }
+    .mh#{$spacerVal}--lg {
+      margin-left: #{$spacerVal}px;
+      margin-right: #{$spacerVal}px;
+    }
+
+    .p#{$spacerVal}--lg {
+      padding: #{$spacerVal}px;
+    }
+    .pt#{$spacerVal}--lg {
+      padding-top: #{$spacerVal}px;
+    }
+    .pb#{$spacerVal}--lg {
+      padding-bottom: #{$spacerVal}px;
+    }
+    .pl#{$spacerVal}--lg {
+      padding-left: #{$spacerVal}px;
+    }
+    .pr#{$spacerVal}--lg {
+      padding-right: #{$spacerVal}px;
+    }
+    .pv#{$spacerVal}--lg {
+      padding-top: #{$spacerVal}px;
+      padding-bottom: #{$spacerVal}px;
+    }
+    .ph#{$spacerVal}--lg {
+      padding-left: #{$spacerVal}px;
+      padding-right: #{$spacerVal}px;
+    }
+
+    .mt#{$spacerVal}--neg--lg {
+      margin-top: -#{$spacerVal}px;
+    }
+    .mb#{$spacerVal}--neg--lg {
+      margin-bottom: -#{$spacerVal}px;
+    }
+    .ml#{$spacerVal}--neg--lg {
+      margin-left: -#{$spacerVal}px;
+    }
+    .mr#{$spacerVal}--neg--lg {
+      margin-right: -#{$spacerVal}px;
+    }
+
+    .h#{$heightVal}--lg {
+      height: #{$heightVal}px;
+    }
+
+    .w#{$heightVal}--lg {
       width: #{$heightVal}px;
     }
   }
@@ -153,7 +224,7 @@
   width: 100%;
 }
 
-.w100p--resp {
+.w100p--sm {
   @media only screen and (max-width: $breakpoint-desk) {
     width: 100%;
   }

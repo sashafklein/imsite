@@ -16,25 +16,25 @@
   &-col-r {
     flex-direction: column-reverse;
   }
-  &-row-r--resp {
+  &-row-r--sm {
     @media only screen and (max-width: $breakpoint-desk) {
       flex-direction: row-reverse;
     }
   }
 
-  &-row--resp {
+  &-row--sm {
     @media only screen and (max-width: $breakpoint-desk) {
       flex-direction: row;
     }
   }
 
-  &-col-r--resp {
+  &-col-r--sm {
     @media only screen and (max-width: $breakpoint-desk) {
       flex-direction: column-reverse;
     }
   }
 
-  &-col--resp {
+  &-col--sm {
     @media only screen and (max-width: $breakpoint-desk) {
       flex-direction: column;
     }
@@ -60,20 +60,27 @@
     &--fe {
       justify-content: flex-end;
     }
+  }
 
-    @media only screen and (max-width: $breakpoint-desk) {
-      &--fe--resp {
-        justify-content: flex-end;
-      }
-      &--c--resp {
-        justify-content: center;
-      }
-      &--sa--resp {
-        justify-content: space-around;
-      }
-      &--fa--resp {
-        justify-content: flex-start;
-      }
+  &-ai {
+    &--sb {
+      align-items: space-between;
+    }
+
+    &--c {
+      align-items: center;
+    }
+
+    &--sa {
+      align-items: space-around;
+    }
+
+    &--fs {
+      align-items: flex-start;
+    }
+
+    &--fe {
+      align-items: flex-end;
     }
   }
 
@@ -102,6 +109,52 @@
   &-as {
     &--fs {
       align-self: flex-start;
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-desk) {
+    &-jc {
+      &--sb--sm {
+        justify-content: space-between;
+      }
+
+      &--c--sm {
+        justify-content: center;
+      }
+
+      &--sa--sm {
+        justify-content: space-around;
+      }
+
+      &--fs--sm {
+        justify-content: flex-start;
+      }
+
+      &--fe--sm {
+        justify-content: flex-end;
+      }
+    }
+
+    &-ai {
+      &--sb--sm {
+        align-items: space-between;
+      }
+
+      &--c--sm {
+        align-items: center;
+      }
+
+      &--sa--sm {
+        align-items: space-around;
+      }
+
+      &--fs--sm {
+        align-items: flex-start;
+      }
+
+      &--fe--sm {
+        align-items: flex-end;
+      }
     }
   }
 }
