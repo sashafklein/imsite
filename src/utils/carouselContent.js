@@ -1,29 +1,29 @@
 import React from "react"
 
-const contentData = ({ title, assets }) => [
+const contentData = ({ title, shortTitle, assets }) => [
   {
     width: 450,
     asset: assets.healthcareWorkersIll,
     title: "Clearing healthcare workers",
-    content: `Healthcare works are at the highest risk for contracting COVID-19, but essential on-going care, such as eldercare, non-COVID outpatient and inpatient care, or dialysis, cannot be neglected long-term. With ${title}, healthcare workers who have recovered from COVID-19 could safely return to the frontlines where they’re needed most.`,
+    content: `The frontline health workforce’s role and collective capacity is under historic stress. Without tactical support, we expose healthcare workers and their patients to unnecessary risks. With ${shortTitle}, doctors, nurses, and caretakers can confidently return to the frontlines where they’re needed, and those with confirmed immunity status can be focused safely on serving the most vulnerable at-risk populations.`,
   },
   {
-    width: 400,
+    width: 350,
     asset: assets.workIll,
-    title: "Liberating the workforce",
-    content: `Emergency measures that saved lives have also brought economic activity to a halt. ${title}'s integrated screening and analysis will allow employers and local officials to safely re-open for business, enabling business and government to base critical decision-making on the high-confidence computed status of each individual's combined test results.`,
+    title: "Reopening the workforce",
+    content: `Emergency measures that save lives have also brought economic activity to a near-halt. Increased screening and careful analysis of test data allows employers and local officials to safely re-open for business. ${shortTitle} allows businesses and government to base their critical decision-making on the high-confidence computed status of each individual’s combined test results.  Let’s get back to work and back to normal.`,
   },
   {
     width: 300,
     title: "Catching a ride",
     asset: assets.catchRideIll,
-    content: `${title} will allow drivers and riders assess their individual risk when accepting a ride share arrangement. Rideshare partners will integrate Verified Immunity Scores into profiles, so that for example, an immunosuppressed customer could be paired with a high-scoring driver or only accept ride with a specialized disinfection protocol.`,
+    content: `${shortTitle} will allow drivers and riders to assess their individual risk when calling a ride. Transportation partners can integrate ${shortTitle} scores into driver and passenger profiles, so that the elderly and immunosuppressed can regain their mobility. Transit systems could integrate ${shortTitle} to ensure safe transport for the broader population.`,
   },
   {
-    width: 380,
+    width: 330,
     title: "Back to school",
     asset: assets.backToSchoolIll,
-    content: `With Pre-K-12 schools shuttered and entire university and college campuses shut down, teachers and students are struggling to maintain progress in a wholly new paradigm.  Parents also struggle as they juggle their other responsibilities with at-home kids. ${title} will help us restart the school system, while limiting danger to those most at risk.`,
+    content: `With primary schools suspended and entire university and college campuses shut down, teachers and students are struggling to maintain progress in a wholly new paradigm.  Parents also struggle as they juggle their other responsibilities with at-home kids and shuttered childcare. ${shortTitle} arms administrators with the information they need to keep their communities protected.`,
   },
 ]
 
@@ -31,7 +31,7 @@ export default data => {
   const content = contentData(data)
   return content.map(({ title, asset, width, content }, ind) => (
     <div className="flex flex-col pb40--resp" key={title}>
-      <div className="h400 flex flex-col flex-jc--fs">
+      <div className="h400 flex flex-col flex-jc--c">
         <img style={{ width }} alt={title} src={asset} />
       </div>
       <div className="flex flex-col h250 flex-ai--fs left">

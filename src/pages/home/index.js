@@ -8,7 +8,6 @@ import Carousel from "@components/carousel"
 import { getAssets } from "@utils/getAssets"
 import SEO from "@components/seo"
 import Button from "@components/button"
-import LinkFooter from "@components/link-footer"
 import Alternators from "@components/alternators"
 
 import carouselNodes from "@utils/carouselContent"
@@ -23,6 +22,7 @@ const IndexPage = () => {
         siteMetadata {
           description
           title
+          shortTitle
           heroDescription
         }
       }
@@ -42,8 +42,8 @@ const IndexPage = () => {
   ] = useState(0)
   const assets = getAssets(allFile)
 
-  const { title, description, heroDescription } = site.siteMetadata
-  const slides = carouselNodes({ title, assets })
+  const { title, description, shortTitle, heroDescription } = site.siteMetadata
+  const slides = carouselNodes({ title, shortTitle, assets })
   const slideSize = 500
   const horizontalScrollLength = slideSize * slides.length
 
@@ -161,7 +161,7 @@ const IndexPage = () => {
         </div>
 
         <div className="container--large pb150 hidden-sm">
-          <h4 className="left color--dark-purple">How it Works</h4>
+          <h4 className="left color--dark-purple">How it works</h4>
           <img
             src={assets.diagram}
             width="100%"
@@ -169,7 +169,6 @@ const IndexPage = () => {
           />
         </div>
       </div>
-      <LinkFooter to="/solution" text="Our solution" />
     </div>
   )
 }

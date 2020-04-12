@@ -21,6 +21,6 @@ export default ({ assets, title }) => [
       className: "ml10 ml0--resp w365 w250--resp",
     },
     title: `A vital institution built for trust`,
-    content: `Everyday people don't trust large institutions with their data—not government and not big tech. {title} exists solely to facilitate the safe reintegration of society by verifying COVID-19 immunity without compromising privacy or letting personal data fall into the wrong hands.`,
+    content: `Everyday people don't trust large institutions with their data—not government and not big tech. ${title} exists solely to facilitate the safe reintegration of society by verifying COVID-19 immunity without compromising privacy or letting personal data fall into the wrong hands.`,
   },
 ]

@@ -1,7 +1,5 @@
 import React from "react"
 
-import LinkFooter from "@components/link-footer"
-
 const Mission = () => (
   <div className="page mission">
     <div className="container">
@@ -9,7 +7,6 @@ const Mission = () => (
         <h1>Mission</h1>
       </div>
     </div>
-    <LinkFooter to="/about-us" text="About us" />
   </div>
 )
 
