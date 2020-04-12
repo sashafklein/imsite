@@ -95,7 +95,7 @@ const IndexPage = () => {
 
       <div className="bg--gradient--off-white-white">
         <div className="container--small pt80">
-          <Alternators alternators={homeAlternators({ assets, title })} />
+          <Alternators alternators={homeAlternators({ assets, shortTitle })} />
         </div>
       </div>
 

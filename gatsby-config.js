@@ -4,8 +4,8 @@ module.exports = {
   siteMetadata: {
     title: `ImSafe Pass`,
     shortTitle: `ImSafe`,
-    description: `A safe & secure way to demonstrate immunity.`,
-    heroDescription: `We're building a solution to help us all get back to normal in the wake of COVID-19 that serves public health and respects personal privacy.`,
+    description: `A secure and private way to share your immune status.`,
+    heroDescription: `We’re helping return us to post-COVID-19 normal by rebuilding public trust while respecting personal privacy.`,
     author: `@imsafepass`,
     siteURL: `https://quizzical-goldwasser-10d083.netlify.com`,
   },

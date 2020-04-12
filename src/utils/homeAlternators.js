@@ -1,11 +1,11 @@
-export default ({ assets, title }) => [
+export default ({ assets, shortTitle }) => [
   {
     img: {
       src: assets.metricIll,
       className: "ml10 ml0--resp w365 w250--resp",
     },
     title: "A metric of health available to all",
-    content: `${title} uses a combination of medical testing and recent lifestyle factors to evaluate each person’s risk and responsibility. Unlike the swab-based tests in short supply, ${title} testing will be broadly available.`,
+    content: `${shortTitle} combines medical testing, the latest research, and statistical analysis to evaluate each individual’s immunological safety status. As laboratory and at-home tests become more broadly available, both antibody and active infection tests will provide critical results. We stitch together individual test data points to arrive at a high-confidence, actionable value.`,
   },
   {
     img: {
@@ -13,7 +13,7 @@ export default ({ assets, title }) => [
       className: "w450 w300--resp",
     },
     title: `A way to find our new normal sooner`,
-    content: `If we don't have a solution for demonstrating immunity at scale, we could see an incredibly prolonged lockdown with unimaginable social and economic consequences. ${title} is uniquely focused on this problem, and will be able to solve it quickly without compromising public health or individual security.`,
+    content: `Without a solution for establishing immune safety at scale, we could see an incredibly prolonged lockdown with unimaginable social and economic consequences. ${shortTitle} is uniquely focused on this problem, and will be able to solve it quickly without compromising individual privacy or public health.`,
   },
   {
     img: {
@@ -21,6 +21,6 @@ export default ({ assets, title }) => [
       className: "ml10 ml0--resp w365 w250--resp",
     },
     title: `A vital institution built for trust`,
-    content: `Everyday people don't trust large institutions with their data—not government and not big tech. ${title} exists solely to facilitate the safe reintegration of society by verifying COVID-19 immunity without compromising privacy or letting personal data fall into the wrong hands.`,
+    content: `Everyday people don’t trust large institutions with their data—not governments and not big tech. We founded ${shortTitle} to solve this urgent problem without sacrificing an inch of privacy, individual control, and civil liberty.  Your personal records are encrypted at rest and in transit, separated from identifying information, and only shared with your explicit approval and consent.`,
   },
 ]

@@ -1,6 +1,6 @@
 import React from "react"
 
-const contentData = ({ title, shortTitle, assets }) => [
+const contentData = ({ shortTitle, assets }) => [
   {
     width: 450,
     asset: assets.healthcareWorkersIll,
